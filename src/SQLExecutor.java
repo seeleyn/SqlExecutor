@@ -292,7 +292,9 @@ class SQLExecutor {
 
 	public static void main(String[] args) throws Exception {
 		if (args.length < 3) {
-			System.err.println("Usage   : jdbcDriverClass jdbcURL user [password]");
+			System.err.println("Usage: jdbcDriverClass jdbcURL user [password]");
+			System.err.println("Examples: ");
+			System.err.println(" org.postgresql.Driver jdbc:postgresql://192.168.0.2:5432/mydatabase bob p@ssw0rd");
 			return;
 		}
 		String driver = args[0];

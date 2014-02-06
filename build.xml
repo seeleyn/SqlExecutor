@@ -1,4 +1,8 @@
-<project>
+<project name="SQLExecutor" default="run">
+
+    <path id="class.path">
+        <fileset dir="lib" includes="*.jar"/>
+    </path>
 
     <target name="clean">
         <delete dir="build"/>
@@ -19,7 +23,7 @@
     </target>
 
     <target name="run" depends="jar">
-        <java jar="build/jar/SQLExecutor.jar" fork="true"/>
+        <java jar="build/jar/SQLExecutor.jar" fork="true" classpathref="class.path"/>
     </target>
 
 </project>
